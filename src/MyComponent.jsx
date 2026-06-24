@@ -47,7 +47,7 @@ function MyComponent() {
         createdAt: Date.now(),
       });
 
-      fetchNotes();
+      await fetchNotes();
       setText("");
     } catch (err) {
       console.log(err.message);
@@ -63,7 +63,7 @@ function MyComponent() {
 
     try {
       await deleteDoc(doc(db, "notes", id));
-      fetchNotes();
+      await fetchNotes();
     } catch (err) {
       console.log(err.message);
     }
@@ -79,7 +79,7 @@ function MyComponent() {
         text: text,
       });
 
-      fetchNotes();
+      await fetchNotes();
       setText("");
       setEditIndex(null);
     } catch (err) {
