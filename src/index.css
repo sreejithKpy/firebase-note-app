@@ -1,0 +1,250 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* ==========================================================================
+   ⚡ DRUMS OF LIBERATION - FINAL GEAR 5 THEME (notes.css)
+   ========================================================================== */
+
+.notes-page-wrapper {
+  /* ☁️ പുകയുടെ എഫക്റ്റ് തരുന്ന ഡാർക്ക് റേഡിയൽ ഗ്രേഡിയന്റ് */
+  background: 
+    linear-gradient(rgba(10, 9, 15, 0.85), rgba(10, 9, 15, 0.92)), 
+    url('/gear5-bg.jpg'); /* പബ്ലിക് ഫോൾഡറിലെ ഫോട്ടോ നേരിട്ട് വിളിക്കുന്നു */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  color: #e2e0ee;
+  box-sizing: border-box;
+}
+
+/* 📝 APP HEADER */
+.notes-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.notes-header::before {
+  content: "⚡ ⚡";
+  font-size: 2rem;
+  color: #ffffff;
+  display: block;
+  opacity: 0.9;
+  letter-spacing: 40px;
+  margin-bottom: -10px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.notes-header h1 {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 4rem; 
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff; 
+  margin: 0;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+
+.notes-header p {
+  color: #a399d6;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* 🔍 SEARCH BOX */
+.notes-search-box {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.notes-search-box input {
+  width: 100%;
+  background: rgba(23, 20, 38, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  border-radius: 12px;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.notes-search-box input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+/* 🖋️ NOTE CREATOR CARD */
+.notes-creator-card {
+  background: rgba(23, 20, 38, 0.75); /* വാൾപേപ്പറിനോട് മാച്ചാകുന്ന വൈലറ്റ്-ബ്ലാക്ക് */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 3rem;
+  backdrop-filter: blur(10px); /* പിന്നിലെ വാൾപേപ്പർ ലൈറ്റ് ആയി കാണാൻ */
+}
+
+.notes-creator-card textarea {
+  background: rgba(13, 11, 22, 0.9); /* ഉള്ളിലെ ബോക്സ് കുറച്ചുകൂടി ഡാർക്ക് */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  color: #ffffff; /* എഴുതുന്ന അക്ഷരങ്ങൾ പ്യുവർ വൈറ്റ് */
+  font-size: 1.05rem;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.notes-creator-card textarea::placeholder {
+  color: #55506a;
+}
+
+.notes-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* 🚀 BUTTONS */
+.notes-add-btn, .notes-save-btn {
+  background: #ffffff; 
+  color: #0c0a10;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.notes-add-btn:hover {
+  background: #e4e2ed;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+.notes-clear-btn {
+  background: transparent;
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 🗂️ NOTES DISPLAY GRID */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-card {
+  background: rgba(23, 20, 38, 0.7); /* സെമി ട്രാൻസ്പരന്റ് വൈലറ്റ് ബ്ലാക്ക് */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.note-card::before {
+  content: "⚡";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.note-card::after {
+  content: "⚡";
+  position: absolute;
+  bottom: 52px;
+  left: 12px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 215, 0, 0.6); /* കറക്റ്റ് മിന്നൽ മഞ്ഞ കളർ */
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.25); /* മഞ്ഞ ഗ്ലോ എഫക്റ്റ് */
+}
+
+
+
+.note-card-text {
+  margin: 0 0 1.5rem 0;
+  color: #ffffff; 
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.note-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 0.75rem;
+}
+
+.card-edit-btn, .card-delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.card-edit-btn { color: #9c8df2; }
+.card-delete-btn { color: #ff6b6b; }
+
+.notes-loading, .notes-empty-state {
+  text-align: center;
+  padding: 4rem 0;
+  color: #a399d6;
+}
