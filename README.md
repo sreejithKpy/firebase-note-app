@@ -1,10 +1,10 @@
 # 🏴‍☠️ Joyboy's Journal
 
-A modern cloud-powered notes application built with React.js and Firebase Firestore. Create, edit, search, and manage your thoughts in a beautifully designed archive inspired by adventure and exploration.
+A modern cloud-powered notes application built with React.js and Firebase Firestore.
 
 ## 🚀 Live Demo
 
-https://YOUR_NETLIFY_URL.netlify.app
+https://joyboysjournal.netlify.app/
 
 ## ✨ Features
 
@@ -25,25 +25,31 @@ https://YOUR_NETLIFY_URL.netlify.app
 * Firebase Firestore
 * JavaScript (ES6+)
 * CSS3
+* Vite
 * Git & GitHub
 * Netlify
 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
+git clone https://github.com/sreejithKpy/firebase-note-app.git
+
+cd firebase-note-app
+
 npm install
+
 npm run dev
 ```
 
 ## 🔥 Firebase Setup
 
-Enable Firestore Database in Firebase Console and add your Firebase configuration inside:
+Create a Firebase project and add your Firebase configuration inside:
 
 ```js
 src/firebase.js
 ```
+
+Enable Firestore Database from Firebase Console.
 
 ## 🎯 Future Improvements
 
@@ -51,11 +57,11 @@ src/firebase.js
 * User-Specific Notes
 * Categories & Tags
 * Dark / Light Mode
-* Note Export
 * Rich Text Editor
+* Note Export
 
 ## 👨‍💻 Author
 
 Sreejith
 
-Built with React and Firebase Firestore.
+Built with React & Firebase Firestore.
